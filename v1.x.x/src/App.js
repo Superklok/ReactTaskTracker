@@ -29,11 +29,22 @@ const App = () => {
 		setTasks(tasks.filter((task) => task.id !== id));
 	}
 
+	// Toggle reminder
+	const toggleReminder = (id) => {
+		setTasks(
+			tasks.map((task) => task.id === id 
+			? {...task, reminder: !task.reminder} : task));
+	}
+
 	return (
 		<div className="container">
 			<Header />
-			{tasks.length > 0 ? <Tasks tasks={tasks}
-			onDestroy={destroyTask} /> : 
+			{tasks.length > 0 ? 
+			<Tasks 
+				tasks={tasks}
+				onDestroy={destroyTask} 
+				onToggle={toggleReminder} 
+			/> : 
 			<h3>Your schedule's clear! What's next on the agenda?</h3>}
 		</div>
 	);
