@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
@@ -7,6 +7,24 @@ const App = () => {
 	const [showAddTask, setShowAddTask] = useState(false),
 		  [tasks, setTasks]             = useState([]);
 	
+	// Populate tasks
+	useEffect(() => {
+		const getTasks = async () => {
+			const tasksFromServer = await fetchTasks();
+
+			setTasks(tasksFromServer);
+		}
+		getTasks();
+	}, []);
+
+	// Fetch tasks from JSON server
+	const fetchTasks = async () => {
+		const res  = await fetch('http://localhost:6187/tasks'),
+				data = await res.json();
+		
+		return data;
+	}
+
 	// Add new task
 	const addTask = (task) => {
 		const id      = Math.floor(Math.random() * 10000) +1,
