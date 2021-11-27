@@ -32,8 +32,9 @@ const App = () => {
 	return (
 		<div className="container">
 			<Header />
-			<Tasks tasks={tasks}
-			onDestroy={destroyTask} />
+			{tasks.length > 0 ? <Tasks tasks={tasks}
+			onDestroy={destroyTask} /> : 
+			<h3>Your schedule's clear! What's next on the agenda?</h3>}
 		</div>
 	);
 }
