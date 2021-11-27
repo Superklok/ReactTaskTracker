@@ -125,3 +125,8 @@ footer {
 	border-radius: 5px;
 	box-shadow: inset 0 6px 12px 0 rgba(6,214,160,0.25);
 }
+
+.digital input:focus {
+	outline: none !important;
+	border: 1px solid rgba(6,214,160,0.7);
+}
