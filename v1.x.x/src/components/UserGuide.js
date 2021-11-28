@@ -2,7 +2,7 @@ const UserGuide = () => {
 	return (
 		<div>
 			<h2 className='guideTitle'>User Guide</h2>
-			<h4 className='version'>Version 1.19.0</h4>
+			<h4 className='version'>Version 1.19.1</h4>
 			<ul>
 				<li>
 					<p>Press the "Add" button to open the task input area.</p>
