@@ -20,7 +20,15 @@ const App = () => {
 	// Fetch tasks from JSON server
 	const fetchTasks = async () => {
 		const res  = await fetch('http://localhost:6187/tasks'),
-				data = await res.json();
+			  data = await res.json();
+		
+		return data;
+	}
+
+	// Fetch task
+	const fetchTask = async (id) => {
+		const res  = await fetch(`http://localhost:6187/tasks/${id}`),
+			  data = await res.json();
 		
 		return data;
 	}
@@ -28,13 +36,13 @@ const App = () => {
 	// Add new task
 	const addTask = async (task) => {
 		const res = await fetch('http://localhost:6187/tasks', {
-			method: 'POST',
-			headers: {
-				'content-type': 'application/json',
-			},
-			body: JSON.stringify(task),
-		});
-		const data = await res.json();
+						method: 'POST',
+						headers: {
+							'Content-type': 'application/json',
+						},
+						body: JSON.stringify(task),
+					}),
+			 data = await res.json();
 		
 		setTasks([...tasks, data]);
 	}
@@ -48,10 +56,21 @@ const App = () => {
 	}
 
 	// Toggle reminder
-	const toggleReminder = (id) => {
+	const toggleReminder = async (id) => {
+		const taskToToggle = await fetchTask(id),
+			  updatedTask  = {...taskToToggle, reminder: !taskToToggle.reminder},
+			  res          = await fetch (`http://localhost:6187/tasks/${id}`, {
+								 method: 'PUT',
+								 headers: {
+									 'Content-type': 'application/json'
+								 },
+								 body: JSON.stringify(updatedTask),
+							 }),
+			 		  data = await res.json();
+
 		setTasks(
 			tasks.map((task) => task.id === id 
-			? {...task, reminder: !task.reminder} : task));
+			? {...task, reminder: data.reminder} : task));
 	}
 
 	return (
