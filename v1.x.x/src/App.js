@@ -1,7 +1,10 @@
 import {useState, useEffect} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
+import UserGuide from './components/UserGuide';
 
 const App = () => {
 	const [showAddTask, setShowAddTask] = useState(false),
@@ -74,20 +77,32 @@ const App = () => {
 	}
 
 	return (
-		<div className="container">
-			<Header 
-				onAdd={() => setShowAddTask(!showAddTask)} 
-				showAdd={showAddTask} 
-			/>
-			{showAddTask && <AddTask onAdd={addTask} />}
-			{tasks.length > 0 ? 
-			<Tasks 
-				tasks={tasks}
-				onDestroy={destroyTask} 
-				onToggle={toggleReminder} 
-			/> : 
-			<h3>Your schedule's clear! What's next on the agenda?</h3>}
-		</div>
+		<Router>
+			<div className='container'>
+				<Header 
+					onAdd={() => setShowAddTask(!showAddTask)} 
+					showAdd={showAddTask} 
+				/>
+				<Routes>
+					<Route path='/' 
+						exact 
+						element={(
+						<>
+							{showAddTask && <AddTask onAdd={addTask} />}
+							{tasks.length > 0 ? 
+							<Tasks 
+								tasks={tasks}
+								onDestroy={destroyTask} 
+								onToggle={toggleReminder} 
+							/> : 
+							<h3>Your schedule's clear! What's next on the agenda?</h3>}
+						</>
+					)} />
+					<Route path='/guide' element={UserGuide()} />
+				</Routes>
+				<Footer />
+			</div>
+		</Router>
 	);
 }
 

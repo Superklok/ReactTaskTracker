@@ -10,9 +10,38 @@ body {
 	color: #FFF;
 }
 
+a {
+	color: #06D6A0;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+ul {
+	margin-left: 21px;
+	margin-right: 18px;
+	padding-bottom: 25px;
+}
+
+li {
+	padding-bottom: 5px;
+}
+
 footer {
-	margin-top: 30px;
+	margin-top: 39px;
 	text-align: center;
+	padding-bottom: 14px;
+}
+
+.guideTitle {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 4px;
+}
+
+.version {
+	text-align: center;
+	padding-bottom: 14px;
 }
 
 .container {
@@ -129,4 +158,8 @@ footer {
 .digital input:focus {
 	outline: none !important;
 	border: 1px solid rgba(6,214,160,0.6);
+}
+
+.copyright {
+	padding-bottom: 8px;
 }
