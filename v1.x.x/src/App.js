@@ -34,7 +34,10 @@ const App = () => {
 	}
 
 	// Task destruction
-	const destroyTask = (id) => {
+	const destroyTask = async (id) => {
+		await fetch(`http://localhost:6187/tasks/${id}`, {
+			method: 'DELETE'
+		});
 		setTasks(tasks.filter((task) => task.id !== id));
 	}
 
