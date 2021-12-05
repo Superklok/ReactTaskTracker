@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Chakra Petch', sans-serif;
+	background-color: #F5F1E3;
+	color: #FFF;
+}
+
+a {
+	color: #06D6A0;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+footer {
+	margin-top: 39px;
+	text-align: center;
+	padding-bottom: 14px;
+}
+
+.container {
+	background-color: #1B1B3A;
+	max-width: 500px;
+	margin: 30px auto;
+	overflow: auto;
+	min-height: 300px;
+	padding: 30px;
+	border-radius: 5px;
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.4),
+				0 8px 24px 0 rgba(0,0,0,0.2);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.btn {
+	display: inline-block;
+	background-color: #19535F;
+	color: #FFF;
+	border: none;
+	padding: 8px 20px;
+	margin: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+	font-family: inherit;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:active {
+	transform: scale(0.98);
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.task {
+	background-color: #693668;
+	box-shadow: inset 0 6px 12px 0 rgba(0,0,0,0.5);
+	border-radius: 5px;
+	margin: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.task.reminder {
+	border-left: 5px solid #F84AA7;
+}
+
+.task h3 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.add-form {
+	margin-bottom: 40px;
+}
+
+.form-control {
+	margin: 20px 0;
+}
+
+.form-control label {
+	display: block;
+}
+
+.form-control input {
+	width: 100%;
+	height: 40px;
+	margin: 5px;
+	padding: 3px 7px;
+	font-size: 17px;
+}
+
+.form-control-check {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.form-control-check label {
+	flex: 1;
+}
+
+.form-control-check input {
+	flex: 2;
+	height: 20px;
+}
+
+.digital input {
+	font-family: 'DotGothic16', sans-serif;
+	font-size: 1.8rem;
+	color: #06D6A0;
+	background-color: #2A2D34;
+	border: 1px solid rgba(6,214,160,0.1);
+	border-radius: 5px;
+	box-shadow: inset 0 6px 12px 0 rgba(6,214,160,0.25);
+}
+
+.digital input:focus {
+	outline: none !important;
+	border: 1px solid rgba(6,214,160,0.6);
+}
