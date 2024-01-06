@@ -1,26 +1,26 @@
 {
   "name": "reacttasktracker",
-  "version": "2.2.1",
+  "version": "2.2.5",
   "description": "React Task Tracker",
   "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/Superklok/ReactTaskTracker.git"
   },
-  "author": "Trev Morin <trev@superklok.com> (http://trevmorin.com)",
+  "author": "Trevor Morin <trev@superklok.com> (https://superkloklabs.com)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Superklok/ReactTaskTracker/issues"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^3.5.1"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
