@@ -1,4 +1,4 @@
-# React Task Tracker v2.2.5
+# React Task Tracker v2.2.10
 <br />
 
 ## Basic Root User Deployment Guide For App Evaluation

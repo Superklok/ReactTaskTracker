@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   app:
-    image: superklok/reacttasktracker:2.2.5
+    image: superklok/reacttasktracker:2.2.10
     build: 
       context: .
       target: prod
