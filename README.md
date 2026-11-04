@@ -1,4 +1,4 @@
-# React Task Tracker v2.2.10
+# React Task Tracker v2.2.11
 <br />
 
 ## Basic Root User Deployment Guide For App Evaluation
@@ -304,7 +304,7 @@ exit
 <hr />
 <br />
 
-# React Task Tracker v1.19.6
+# React Task Tracker v1.19.8
 <br />
 
 ## LINUX Setup Guide For App Evaluation
@@ -427,7 +427,6 @@ http://localhost:8000/
 [<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />][react] [<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />][reactrouter] [<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />][node] [<img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white" />][npm]
 
 <br />
-<br />
 
 [javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [css]: https://developer.mozilla.org/en-US/docs/Web/CSS
@@ -439,3 +438,7 @@ http://localhost:8000/
 [reactrouter]: https://reactrouter.com/en/main/start/overview
 [node]: https://nodejs.org/en/docs/guides/
 [npm]: https://docs.npmjs.com/cli/v7/commands/npm
+
+---
+
+💡 *If you find this project useful, reach out via [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e)/[Contra](https://contra.com/Superklok) to hire Superklok Labs today!*
